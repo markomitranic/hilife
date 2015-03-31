@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+	body {
+	background-color: #000000;
+	padding: 0;
+	margin: 0;
+}	
+.backgroundVideo {
+	z-index: 0;
+	position: absolute;
+	top: 0;
+	left: 0;
+  height: 100vh;
+  min-width: 100vw;
+  overflow: hidden;
+		
+}
+#highlifelogo {
+  z-index: 1000;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.workprogresscurtain {
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  top:0;
+  left:0;
+  visibility:hidden;
+}
+.workinprogresscenter {
+ height: 400px;
+ width: 400px;
+ position: relative;
+ left: 0;
+ right: 0;
+ margin: auto;
+ background-color: transparent;
+ margin-top: -200px;
+ top: 50%;
+ visibility: hidden;
+ opacity: 0;
+
+}
+.workinprogress {
+ color: black;
+ margin: 0 auto;
+ font-family: 'Helvetica Neue', 'MonacoRegular', 'Courier New';
+ font-size: 30px;
+ text-align: center;
+ position: absolute;
+ top:240px;
+ margin-left: auto;
+ margin-right: auto;
+ left: 0;
+ right: 0;
+}
+.workinprogressimg {
+ width: 150px;
+ position: absolute;
+ margin-left: auto;
+ margin-right: auto;
+ left: 0;
+ right: 0;
+ top:50px;
+}  
+.HILIFEbarimg {
+  z-index: 1001;
+  height: 100%;
+  width: 100%;
+  background-color: white;
+  position: absolute;
+  top:0;
+  left:0;
+  visibility:hidden; 
+}
+.target { mask: url(#krug); }
+	</style>
+
+
+
+</head>
+<body>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<script src="js/snap.svg-min.js"></script>
+
+
+
+
+ 
+  <script src="bgvid/jquery.backgroundvideo.min.js"></script>
+  <script>
+    $(document).ready(function() {
+      var videobackground = new $.backgroundVideo($('body'), {
+        "align": "centerXY",
+        "width": 1920,
+        "height": 1080,
+        "path": "bgvid/",
+        "filename": "highlife1",
+        "types": ["mp4","ogg","webm"]
+      });
+    });
+  </script>
+  <div id="flash-fallback"></div>
+   <img src="HILIFEbar.png" class="HILIFEbarimg">
+
+
+
+
+
+<div class="workprogresscurtain">
+<div class="workinprogresscenter">
+<img src="cloud.png" alt="" class="workinprogressimg">
+<div class="workinprogress">COMING SOON</div>
+</div>
+</div>
+
+<svg  data-action="clickCircleZoom" id="highlifelogo" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" x="0" y="0" viewBox="-59 214 802 118" height="100%" width="100%" enable-background="new 159 214 402 78" xml:space="preserve" >
+  <circle fill="#FFFFFF" cx="257.6" cy="239" r="3.3"/>
+  <circle fill="#FFFFFF" cx="389.7" cy="239" r="3.3"/>
+  <circle fill="#FFFFFF" cx="389.7" cy="223.5" r="3.3" id="circle"/>
+  <rect x="165.9" y="252.3" fill="#FFFFFF" width="4.6" height="34.3"/>
+  <rect x="197.5" y="252.7" fill="#FFFFFF" width="4.6" height="34.1"/>
+  <rect x="165.9" y="267.1" fill="#FFFFFF" width="36.3" height="3.9"/>
+  <rect x="254.9" y="252.7" fill="#FFFFFF" width="4.8" height="34.1"/>
+  <rect x="312.5" y="252.7" fill="#FFFFFF" width="4.4" height="34.1"/>
+  <rect x="312.5" y="283" fill="#FFFFFF" width="28.4" height="3.7"/>
+  <rect x="387.1" y="252.7" fill="#FFFFFF" width="4.8" height="34.1"/>
+  <rect x="444.6" y="252.7" fill="#FFFFFF" width="4.9" height="34.1"/>
+  <rect x="444.6" y="268.4" fill="#FFFFFF" width="30.1" height="3.6"/>
+  <rect x="444.6" y="252.7" fill="#FFFFFF" width="30.1" height="3.9"/>
+  <rect x="523.8" y="252.7" fill="#FFFFFF" width="31.4" height="3.9"/>
+  <rect x="523.8" y="252.7" fill="#FFFFFF" width="4.6" height="34.1"/>
+  <rect x="523.8" y="267.3" fill="#FFFFFF" width="31.4" height="3.8"/>
+  <rect x="523.8" y="283" fill="#FFFFFF" width="31.4" height="3.9"/>
+
+</svg>
+
+
+<script>
+var actions = {};
+$(document.body).on('click', '[data-action]', function () {
+    var action = $(this).data('action');
+    if (actions.hasOwnProperty(action)) {
+        actions[action].apply(this, arguments);
+    } else if (console.error) {
+        console.error('Action ' + action + ' does not exist. Called by ', this);
+    }
+});
+
+// AKCIJA ZA SLIDE MENIJA NA MOBILNIM VELICINAMA
+actions.clickCircleZoom = function (e) {
+
+  var highlifelogo = Snap('#highlifelogo'),
+  svgcircle = highlifelogo.select('#circle');
+ 
+  svgcircle.animate({'r': '150%'}, 1500, mina.easeinout)
+
+      setTimeout(function() {
+      $('#highlifelogo').css({'visibility':'hidden'})
+      $('.workprogresscurtain').css({'visibility' : 'visible'})
+      $('.HILIFEbarimg').css({'visibility' : 'visible'})
+      $('#video_background').css({'visibility':'hidden'});
+      $('.workinprogresscenter').css({'visibility': 'visible', 'z-index':'9000'})
+      $('.workinprogresscenter').animate({'opacity': '1'}, 300, mina.easeinout);
+         }, 1500); 
+  
+
+
+
+};
+
+
+
+
+
+</script>
+
+
+
+
+
+
+</body>
+</html>
