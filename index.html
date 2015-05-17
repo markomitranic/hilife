@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<script src="js/jquery-2.1.4.min.js"></script>
+<!-- HEADER -->
+<div class="header"><div class="pure-g header-wrapper">
+	<div class="pure-u-1-5"><img src="img/logo_header.png" alt=""></div>
+	<div class="pure-u-4-5">a</div>
+</div></div>
+
+<!-- CAROUSEL -->
+<div id="slide" class="slide1"></div>
+<script type="text/javascript">
+$(document).ready(function () {
+
+	//
+function slider() {
+	setTimeout(function() {
+	$('#slide').removeClass("slide1");
+	$('#slide').toggleClass("slide2");
+	}, 3000); 
+	setTimeout(function() {
+	$('#slide').removeClass("slide2");
+	$('#slide').toggleClass("slide3");
+	}, 6000); 
+	setTimeout(function() {
+	$('#slide').removeClass("slide3");
+	$('#slide').toggleClass("slide1");
+	}, 9000); 
+} slider();
+});
+</script>
+
+
+</body>
+</html>

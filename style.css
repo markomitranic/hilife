@@ -1,0 +1,60 @@
+/*
+   ,(   ,(   ,(   ,(   ,(   ,(   ,(   ,(
+`-'  `-'  `-'  `-'  `-'  `-'  `-'  `-'  `
+ *************************************
+ *         NOMAD DASH STUDIO         *
+ ************************************* 
+	Theme Name: MACOLA wordpress theme
+	Author: Marko Mitranic
+	Author URI: www.nomaddash.com
+	Version: 1.0
+*/
+
+/* CAROUUSEL */
+
+html,
+body {
+  height: 100%;
+  min-height: 600px;
+  background-color: white;
+  font-family: 'roboto', 'helvetica neue', arial, sans-serif;
+}
+
+.header {
+  width: 100%;
+  height: 75px;
+  position: fixed;
+  top:0;
+  left: 0;
+  background-color: black;
+  background-image: url(img/header_background.jpg);
+  box-shadow: 0px 2px 10px rgba(0,0,0,0.5);
+  z-index: 900;
+}
+.header-wrapper {
+  width: 998px;
+  margin: 0 auto;
+}
+.header-wrapper img {
+  height: 44px;
+  margin-top: 10px;
+}
+#slide {
+  width: 100%;
+  height: 390px;
+  margin-top: 75px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  transition: all 0.4s ease-in-out;
+}
+.slide1 {
+  background-image: url(img/slide1.jpg);
+}
+.slide2 {
+  background-image: url(img/slide2.jpg);
+}
+.slide3 {
+  background-image: url(img/slide3.jpg);
+}
+
+
