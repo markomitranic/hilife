@@ -14,11 +14,21 @@
 </div></div>
 
 <!-- CAROUSEL -->
-<div id="slide" class="slide1"></div>
-<script type="text/javascript">
-$(document).ready(function () {
+<div id="slidewrapper">
+<div id="slide" class="slide1">
+<img src="img/slide1.jpg" style="visibility:hidden; width:100%;" alt=""></div></div>
 
-	//
+<div class="content"><div class="pure-g">
+	<div class="pure-u-1-2">marko</div>
+	<div class="pure-u-1-2">marko</div>
+</div></div>
+<script type="text/javascript">
+//Da zapocne ONLOAD carousel i proveri visinu
+$(document).ready(function () {
+slider();
+calcSlideHeight();
+});
+// funkcija menja slajdove jedan po jedan
 function slider() {
 	setTimeout(function() {
 	$('#slide').removeClass("slide1");
@@ -31,9 +41,17 @@ function slider() {
 	setTimeout(function() {
 	$('#slide').removeClass("slide3");
 	$('#slide').toggleClass("slide1");
-	}, 9000); 
-} slider();
-});
+	}, 9000);
+	x = setTimeout("slider()", 9000); 
+} 
+</script>
+<script>
+//Funkcija koja proverava kada se menja velicina prozora i menja velicinu wrappera za slider
+$( window ).resize(function() { calcSlideHeight(); });
+function calcSlideHeight() {
+	var slideheight = $('#slide').height();
+	$('#slidewrapper').css("height", slideheight);
+};
 </script>
 
 

@@ -39,10 +39,14 @@ body {
   height: 44px;
   margin-top: 10px;
 }
-#slide {
-  width: 100%;
+#slidewrapper {
+    width: 100%;
   height: 390px;
-  margin-top: 75px;
+  padding-top: 72px;
+  overflow: hidden;
+}
+#slide {
+  background-size: contain;
   background-repeat: no-repeat;
   background-position: center center;
   transition: all 0.4s ease-in-out;
@@ -56,5 +60,10 @@ body {
 .slide3 {
   background-image: url(img/slide3.jpg);
 }
-
+.content {
+  width: 960px;
+    display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
