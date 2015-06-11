@@ -2,47 +2,172 @@
 <html>
 <head>
 	<title></title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
 	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/pure-min.css">
-	<link rel="stylesheet" type="text/css" href="style.css">
+	<!--[if lte IE 8]>
+    <link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-old-ie-min.css">
+	<![endif]-->
+	<!--[if gt IE 8]><!-->
+	<link rel="stylesheet" href="http://yui.yahooapis.com/pure/0.6.0/grids-responsive-min.css">
+	<!--<![endif]-->
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
 <script src="js/jquery-2.1.4.min.js"></script>
+
+
+
 <!-- HEADER -->
-<div class="header"><div class="pure-g header-wrapper">
-	<div class="pure-u-1-5"><img src="img/logo_header.png" alt=""></div>
-	<div class="pure-u-4-5">a</div>
+
+
+<div class="custom-menu-wrapper">
+    <div class="pure-menu custom-menu custom-menu-top">
+        <a href="http://hilife.rs" class="pure-menu-heading custom-menu-brand"><img src="img/logo_header.png" alt="Hilife Logo"></a>
+        <a href="#" class="custom-menu-toggle" id="toggle"><s class="bar"></s><s class="bar"></s></a>
+    </div>
+    <div class="pure-menu pure-menu-horizontal pure-menu-scrollable custom-menu custom-menu-bottom custom-menu-tucked" id="tuckedMenu">
+        <div class="custom-menu-screen"></div>
+        <ul class="pure-menu-list">
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">FOREO</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">WATERPIK</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">WONDERSTRIPES</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">O NAMA</a></li>
+            <li class="pure-menu-item"><a href="#" class="pure-menu-link">KONTAKT</a></li>
+        </ul>
+    </div>
+</div>
+
+
+
+
+<div class="header"><div class="header-wrapper">
+<div class="pure-g">
+<div class="pure-u-md-1-4"><a href="http://hilife.rs"><img src="img/logo_header.png" alt="Hilife Logo" title="HiLife" class="big_header_logo"></a></div>
+<div class="pure-u-md-3-4">
+<ul class="big_header_menu">
+<li>FOREO</li>
+<li>WATERPIK</li>
+<li>WONDERSTRIPES</li>
+<li>O NAMA</li>
+<li>KONTAKT</li>
+</ul>
+
+</div>
+</div>
 </div></div>
 
+<!-- CAROUSEL PRELOAD -->
+
+<style>
+body:after{
+    display:none;
+    content: url(../img/slide3.jpg) url(../img/slide1.jpg) url(../img/slide2.jpg);
+}
+</style>
 <!-- CAROUSEL -->
 <div id="slidewrapper">
 <div id="slide" class="slide1">
 <img src="img/slide1.jpg" style="visibility:hidden; width:100%;" alt=""></div></div>
 
-<div class="content"><div class="pure-g">
-	<div class="pure-u-1-2">marko</div>
-	<div class="pure-u-1-2">marko</div>
+
+
+
+<!-- CONTENT -->
+<div class="content">
+<article id="homepage_logos"><div class="pure-g home">
+	<section class="pure-u-1 pure-u-md-1-3">
+	<img src="img/waterpik_logo.png" class="companylogo" title="Waterpik" alt="Waterpik Logo">
+	<h2>WATERPIK</h2>
+	<p>Clinical research studies confirm that the Waterpik Water Flosser is the easy, more effective way to floss.</p>
+	</section>
+	<section class="pure-u-1 pure-u-md-1-3">
+	<img src="img/waterpik_logo.png" class="companylogo" title="Waterpik" alt="Waterpik Logo">
+	<h2>WATERPIK</h2>
+	<p>Clinical research studies confirm that the Waterpik Water Flosser is the easy, more effective way to floss.</p>
+	</section>
+	<section class="pure-u-1 pure-u-md-1-3">
+	<img src="img/waterpik_logo.png" class="companylogo" title="Waterpik" alt="Waterpik Logo">
+	<h2>WATERPIK</h2>
+	<p>Clinical research studies confirm that the Waterpik Water Flosser is the easy, more effective way to floss.</p>
+	</section>
+</div>
+</article>
+</div>
+
+
+<!-- FOOTER -->
+
+<div class="footerwrap">
+<div class="footer"><div class="pure-g">
+	<div class="pure-u-1 pure-u-md-3-5">
+	<ul>
+	<li>Naslovna</li>
+	<li>Brendovi</li>
+	<li>Naučna Istraživanja</li>
+	<li>O HiLiFE</li>
+	<li>Kontakt</li>
+	<li>Log in</li>
+	</ul>
+	</div>
+	<div class="pure-u-1 pure-u-md-1-5"><p>Pratite nas</p>
+		<ul class="footer-social">
+		<li class="footer-social-icon-fb"></li>
+		<li class="footer-social-icon-tw"></li>
+		<li class="footer-social-icon-pin"></li>
+		<li class="footer-social-icon-in"></li>
+		</ul>
+	</div>
+	<div class="pure-u-1 pure-u-md-1-5"><p>Primajte novosti na e-mail</p>
+		<div class="footer-email"><span class="footer-email-label">E-Mail</span><span class="footer-email-icon"></span></div>
+	</div>
 </div></div>
+
+
+<div class="copyright"><p>Copyright &copy 2015 HiLiFE. All right reserved.<br>Design by <a href="http://www.nomaddash.com" target="_blank">Nomad Dash</a></p></div>
+
+
+
+</div>
+
+
+
+<script>
+//Da MOBILNI HEADER MENI OTVARA I ZATVARA
+
+(function (window, document) {
+document.getElementById('toggle').addEventListener('click', function (e) {
+    document.getElementById('tuckedMenu').classList.toggle('custom-menu-tucked');
+    document.getElementById('toggle').classList.toggle('x');
+
+});
+})(this, this.document);
+</script>
 <script type="text/javascript">
 //Da zapocne ONLOAD carousel i proveri visinu
 $(document).ready(function () {
 slider();
-calcSlideHeight();
+//mora timeout na funkciju jer FF i Webkit ne renderuju sliku prve sekunde
+setTimeout(function() {
+	calcSlideHeight()
+}, 100);
 });
 // funkcija menja slajdove jedan po jedan
 function slider() {
 	setTimeout(function() {
 	$('#slide').removeClass("slide1");
 	$('#slide').toggleClass("slide2");
-	}, 3000); 
+	}, 5000); 
 	setTimeout(function() {
 	$('#slide').removeClass("slide2");
 	$('#slide').toggleClass("slide3");
-	}, 6000); 
+	}, 10000); 
 	setTimeout(function() {
 	$('#slide').removeClass("slide3");
 	$('#slide').toggleClass("slide1");
-	}, 9000);
-	x = setTimeout("slider()", 9000); 
+	}, 15000);
+	x = setTimeout("slider()", 15000); 
 } 
 </script>
 <script>
@@ -51,6 +176,8 @@ $( window ).resize(function() { calcSlideHeight(); });
 function calcSlideHeight() {
 	var slideheight = $('#slide').height();
 	$('#slidewrapper').css("height", slideheight);
+	console.log(slideheight);
+
 };
 </script>
 
