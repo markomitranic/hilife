@@ -1,0 +1,220 @@
+/*
+   ,(   ,(   ,(   ,(   ,(   ,(   ,(   ,(
+`-'  `-'  `-'  `-'  `-'  `-'  `-'  `-'  `
+ *************************************
+ *         NOMAD DASH STUDIO         *
+ ************************************* 
+	Theme Name: MACOLA wordpress theme
+	Author: Marko Mitranic
+	Author URI: www.nomaddash.com
+	Version: 1.0
+
+sm 568
+md 768
+lg 1024
+xl 1280
+
+    @media screen and (min-width: 48em) { 
+  }
+ @media screen and (min-width: 64em) { 
+  width: 960px;
+  }
+ @media screen and (min-width: 80em) { 
+  width: 1130px;
+  }
+
+
+*/
+/* CAROUUSEL */
+#slidewrapper {
+  width: 100%;
+  height: 390px;
+  overflow: hidden; }
+  @media screen and (min-width: 64em) {
+    #slidewrapper {
+      margin-top: 75px; } }
+
+#slide {
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center 0;
+  transition: all 0.4s ease-in-out; }
+
+.slide1 {
+  background-image: url(../img/slide1.jpg); }
+
+.slide2 {
+  background-image: url(../img/slide2.jpg); }
+
+.slide3 {
+  background-image: url(../img/slide3.jpg); }
+
+/* HOMEPAGE CONTENT */
+#homepage_logos {
+  margin: 60px 0 0px 0; }
+
+#homepage_logos .companylogo {
+  width: 100%; }
+
+#homepage_logos h2 {
+  visibility: hidden; }
+
+#homepage_logos p {
+  text-align: center;
+  color: #919191;
+  padding: 0 20px 0 20px;
+  font-size: 0.8em; }
+
+/* CATEGORY CONTENT */
+#category_products {
+  margin: 0px 0 40px 0; }
+  @media screen and (min-width: 64em) {
+    #category_products {
+      margin: 110px 0 40px 0; } }
+
+#category_products h1 {
+  color: gray;
+  font-size: 1.7em;
+  text-align: center; }
+  @media screen and (min-width: 48em) {
+    #category_products h1 {
+      text-align: inherit;
+      padding: 0 0 0 20px; } }
+  @media screen and (min-width: 80em) {
+    #category_products h1 {
+      text-align: inherit;
+      padding: 0 0 0 80px; } }
+
+#category_products a {
+  text-decoration: none; }
+
+.category-product-box {
+  padding-bottom: 30px;
+  padding-top: 30px;
+  border: solid 1px transparent; }
+
+.category-product-box:hover {
+  border: solid 1px #e5e5e5; }
+
+#category_products .companylogo {
+  width: 100%; }
+
+#category_products h2 {
+  visibility: visible;
+  text-align: center;
+  font-size: 1em;
+  color: gray; }
+
+#category_products p {
+  text-align: center;
+  color: #919191;
+  padding: 0 20px 0 20px;
+  font-size: 0.8em; }
+
+.product-category-image {
+  max-width: 100%;
+  max-height: 200px !important;
+  margin: 0 auto;
+  display: block;
+  text-align: center; }
+
+/* PRODUCT CONTENT */
+.submenu {
+  width: 100%;
+  color: white;
+  background-color: pink;
+  height: auto;
+  line-height: 3em; }
+  @media screen and (min-width: 64em) {
+    .submenu {
+      margin-top: 76px; } }
+
+.submenu ul {
+  margin: 0; }
+  @media screen and (min-width: 64em) {
+    .submenu ul {
+      width: 64em;
+      margin: 0 auto; } }
+
+.submenu li {
+  display: inline-block;
+  padding: 0 15px 0 0; }
+
+#product_page {
+  margin: 33px 0 20px 0; }
+  @media screen and (min-width: 48em) {
+    #product_page {
+      margin: 40px 0 40px 0; } }
+  @media screen and (min-width: 64em) {
+    #product_page {
+      margin: 120px 0 70px 0; } }
+
+.product-page-column-text {
+  padding: 20px; }
+
+.product-page-column-text p {
+  font-size: 0.8em;
+  color: #555553;
+  line-height: 1.6em; }
+
+.product-page-column-text h1 {
+  font-size: 1.3em;
+  margin: 0px 0px 60px 0px;
+  color: #647c93; }
+
+.product-page-column-text h2 {
+  font-size: 1em;
+  margin: 15px 0px 5px 0px;
+  color: #647c93; }
+
+.product-page-column-text ul {
+  margin: 0; }
+
+.product-page-column-text ul li {
+  font-size: 0.7em;
+  color: #555553;
+  padding-bottom: 10px; }
+
+.product-page-column-hero {
+  overflow: hidden;
+  padding: 20px 0 0 0; }
+
+#product-image-hero {
+  background-image: url(../img/waterpik_product_images/product_page/image1.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  transition: .5s; }
+
+#product-image-hero-img {
+  width: 100%;
+  visibility: hidden; }
+
+.product-page-column-picker {
+  padding: 20px 0 0 0; }
+
+.product-image-picker-grid > div {
+  margin: 0 auto; }
+
+.image-picker-option {
+  max-height: 70px;
+  overflow: hidden;
+  border: solid 1px #e5e5e5;
+  margin: 0 auto; }
+  @media screen and (min-width: 48em) {
+    .image-picker-option {
+      border: none;
+      max-height: initial;
+      overflow: initial;
+      margin: initial; } }
+
+.product-image-picker-grid img {
+  width: 100%; }
+  @media screen and (min-width: 48em) {
+    .product-image-picker-grid img {
+      border: solid 1px #e5e5e5; } }
+
+.product-page-column-accessories {
+  padding: 5px 0 0 0; }
+  @media screen and (min-width: 48em) {
+    .product-page-column-accessories {
+      padding: 0 0 0 5px; } }
