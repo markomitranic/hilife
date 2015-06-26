@@ -1,6 +1,6 @@
 <?php
 
-if(in_category('6') || in_category('4')) {include ('proizvod.php');
+if(in_category('6') || in_category('4')) {include ('single-post-proizvod.php');
 }
 else
 if(in_category('27')) {include ('artikl.php');

@@ -1,3 +1,11 @@
+- dodati if IE da bude lokalan fajl PURE
+- Napraviti linkove za manuale
+- 
+
+
+
+
+
 index.php
 The main template file. It is required in all themes.
 
